@@ -9,9 +9,18 @@ public class Ball : MonoBehaviour
     public float maxSpeed = Mathf.Infinity;
     public float currentSpeed { get; set; }
 
+
+    public AudioClip hitSound; // O som que você deseja tocar
+    private AudioSource audioSource;
+
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+     audioSource = GetComponent<AudioSource>();
     }
 
     public void ResetPosition()
@@ -43,5 +52,20 @@ public class Ball : MonoBehaviour
         currentSpeed = Mathf.Min(currentSpeed, maxSpeed);
         rigidbody.velocity = direction * currentSpeed;
     }
+    
+    private void OnCollisionEnter2D(Collision2D collision) 
+    {
+        if (collision.gameObject.CompareTag("Paddle"))
+        {
+            // Toca o som de colisão
+            if (hitSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(hitSound);
+            }
+        }
+
+    }
+
+
 
 }

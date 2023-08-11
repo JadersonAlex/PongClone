@@ -12,9 +12,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text playerScoreText;
     [SerializeField] private Text computerScoreText;
 
+
+     public AudioClip PointSound;
+    private AudioSource audioSource;
+
     private void Start()
     {
         NewGame();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -49,12 +54,14 @@ public class GameManager : MonoBehaviour
     public void OnPlayerScored()
     {
         SetPlayerScore(playerScore + 1);
+        audioSource.PlayOneShot(PointSound); // toca o som do ponto
         NewRound();
     }
 
     public void OnComputerScored()
     {
         SetComputerScore(computerScore + 1);
+        audioSource.PlayOneShot(PointSound); // toca o som do ponto
         NewRound();
     }
 

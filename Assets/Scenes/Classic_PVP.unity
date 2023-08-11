@@ -802,7 +802,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &302478981
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1243,7 +1243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 702247805}
   playerPaddle: {fileID: 1535292066}
-  computerPaddle: {fileID: 1362602729}
+  computerPaddle: {fileID: 1362602732}
   playerScoreText: {fileID: 228497188}
   computerScoreText: {fileID: 618610096}
   PointSound: {fileID: 8300000, guid: f7729dd057438e5478c70ad0262ff3d3, type: 3}
@@ -3465,10 +3465,11 @@ GameObject:
   - component: {fileID: 1362602726}
   - component: {fileID: 1362602728}
   - component: {fileID: 1362602730}
-  - component: {fileID: 1362602729}
   - component: {fileID: 1362602731}
+  - component: {fileID: 1362602732}
+  - component: {fileID: 1362602729}
   m_Layer: 0
-  m_Name: Computer Paddle
+  m_Name: Player 2 Paddle
   m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3567,13 +3568,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362602725}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2c66bb1aa5055643be7d334cf5a3063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  useDynamicBounce: 0
+  useDynamicBounce: 1
   ball: {fileID: 702247804}
 --- !u!61 &1362602730
 BoxCollider2D:
@@ -3615,6 +3616,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceType: 0
   bounceStrength: 0.1
+--- !u!114 &1362602732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362602725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d760e052344f7843a99ae262c617831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+  useDynamicBounce: 0
 --- !u!1 &1439415306
 GameObject:
   m_ObjectHideFlags: 0

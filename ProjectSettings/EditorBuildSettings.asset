@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Classic_CPU.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Soccer_PVP.unity
+    guid: a48c9517c9421454ab753d11469d87a3
+  - enabled: 1
+    path: Assets/Scenes/Classic_PVP.unity
+    guid: ba683053e44ca6e459b66a1d5c3bf5a7
   m_configObjects: {}
